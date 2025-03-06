@@ -1,0 +1,33 @@
+{
+    "manifest_version": 2,
+    "name": "Save Manga",
+    "description": "Save and Open all tabs",
+    "version": "1.0",
+
+    "content_scripts": [
+        {
+            "matches": [ "<all_urls>" ],
+            "js": [ "/update.js", "/open.js", "/background.js" ]
+        }
+    ],
+
+    "browser_action": {
+        "browser_style": true,
+        "default_popup": "/popup.html",
+        "default_icon": {
+            "16": "/images/get_started16.png",
+            "32": "/images/get_started32.png",
+            "48": "/images/get_started48.png",
+            "128": "/images/get_started128.png"
+        },
+        "default_title": "MangaThing"
+    },
+
+    "permissions": [
+        "tabs",
+        "storage",
+        "activeTab",
+        "scripting",
+        "bookmarks"
+    ]
+}
